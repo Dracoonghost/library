@@ -1,0 +1,48 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node dist/index",
+    "lint": "grunt lint",
+    "clean": "rimraf dist/",
+    "transpile": "babel ./ --source-maps --include-dotfiles --keep-file-extension --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "build": "npm run clean && npm run transpile",
+    "build:start": "npm run build && npm run start",
+    "dev": "nodemon --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dracoonghost/library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dracoonghost/library/issues"
+  },
+  "homepage": "https://github.com/Dracoonghost/library#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.11.9",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-html-reporter": "^0.7.4",
+    "eslint-plugin-import": "^2.22.1",
+    "grunt": "^1.3.0",
+    "grunt-eslint": "^23.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2"
+  }
+}

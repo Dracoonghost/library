@@ -1,0 +1,28 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.zip
+# .env
+
+# keys
+pids
+logs
+results
+build
+
+node_modules
+# public/assets/images
+coverage/
+dist/
+report.html
+package.lock.json
+.vscode/
+.scannerwork/
+
+# migration dumps
+migrations/dumps/
