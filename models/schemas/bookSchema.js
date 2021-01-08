@@ -15,7 +15,7 @@ const bookSchema = new mongoose.Schema({
         index: true,
     },
     releaseDate: {
-        type: Date,
+        type: String,
     },
 }, {
     collection: 'books',
