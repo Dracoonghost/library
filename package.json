@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha --timeout 10000 --require @babel/register",
     "start": "node dist/index",
-    "lint": "grunt lint",
+    "lint": "npm run clean && grunt lint",
     "clean": "rimraf dist/",
     "transpile": "babel ./ --source-maps --include-dotfiles --keep-file-extension --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "build": "npm run clean && npm run transpile",

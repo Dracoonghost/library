@@ -43,9 +43,7 @@ export const readBook = async (data) => {
     const {
         ISBN,
     } = data;
-    console.log(ISBN);
     const result = await books.readBook(ISBN);
-    console.log(result);
     if (result) {
         return { code: 1, message: 'READ_SUCCESS', result };
     }
